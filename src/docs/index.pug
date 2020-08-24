@@ -1,0 +1,49 @@
+doctype html
+
+html
+  head
+    title= siteConfig.title
+    meta(name="description" content=siteConfig.description)
+    meta(name="keywords" content=siteConfig.keywords)
+    meta(name="author" content=siteConfig.author)
+    link(rel="stylesheet", href="./styles/awsm.css")
+    link(rel="stylesheet", href="./styles/vn.min.css")
+    link(rel="stylesheet", href="./styles/style.css")
+    link(rel="shortcut icon" type="image/png" href="./image/logo.png")
+
+  body
+    header
+      h1= siteConfig.title
+      h2= siteConfig.description
+    main
+      section#download
+        h3 Download
+          p
+            a(href="./styles/vn.css") vn.css
+          p
+            a(href="./styles/vn.min.css") vn.min.css
+      section#config
+        h3 CSS variable config
+        p I used 2 main colors on Vietnam's flag. They are yellow and red
+          | I also use a variable transparent to make more space for patterns
+          | Below is the variable table
+        table#variable-table
+          thead
+            tr
+              th Variable
+              th Value
+          tbody
+            each value, variable in cssVariables
+              tr
+                td= variable
+                td= value
+      section#demo
+        h3 Demo
+        each value, key in cssRules
+          .container
+            .result(class=`vn-${key + 1}`)
+            .code
+              pre
+                code= value
+    footer
+      p Created by #[a(href="https://phongduong.dev") Phong Duong]
