@@ -1,7 +1,7 @@
 {
   "name": "vncss",
   "version": "1.0.0",
-  "description": "A collection of patterns created with two colors on Vietnam's flag",
+  "description": "A collection of patterns created with two colors in Vietnam's flag",
   "main": "index.js",
   "repository": "https://github.com/phongduong/vncss",
   "author": "Phong Duong",
